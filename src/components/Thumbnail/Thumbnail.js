@@ -8,7 +8,7 @@ const Thumbnail = props => {
       <Card.Body>
         <div className="container-title">
           <Card.Title>{props.title}</Card.Title>
-          <p className='date'>{props.time.toDateString()}</p>
+          <p className='date'>{props.time}</p>
         </div>
         <Card.Text>{props.preview}</Card.Text>
       </Card.Body>

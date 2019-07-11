@@ -10,7 +10,7 @@ const thumbnails = [
   {
     title: 'Proklamasi',
     preview: 'Pukul 00:42 web ini saya proklamasikan telah memposting postingan pertama saya.',
-    time: new Date('2019-7-12T00:27:00')
+    time: 'Jul 12, 2019'
   }
 ]
 export default function MainContainer() {
