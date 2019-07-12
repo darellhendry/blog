@@ -2,7 +2,6 @@ import React from 'react'
 import { posts } from '../../text/text'
 import {StyleSheet, css } from 'aphrodite'
 import { Container, Row, Col } from 'react-bootstrap'
-import './style.css'
 import image from '../../assets/images/00.jpg'
 
 export default class Post extends React.Component {
@@ -27,7 +26,7 @@ export default class Post extends React.Component {
         <Container>
           <Row>
             <Col>
-              <h5 className='h5'>{post.title}</h5>
+              <h5 style={{fontWeight: 'bold'}} className='h5'>{post.title}</h5>
               <p>{post.content}</p>
             </Col>
           </Row>
@@ -42,5 +41,5 @@ const styles = StyleSheet.create({
     height: 450,
     objectFit: 'cover',
     marginBottom: 34
-  }
+  },
 })

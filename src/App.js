@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import {Container} from 'react-bootstrap'
 import Jumbotron from './components/Jumbotron/Jumbotron';
