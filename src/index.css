@@ -1,4 +1,25 @@
-html, body {
-  height: 100%;
-  margin: 0;
+.page-enter {
+  opacity: 0;
+}
+
+.page-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.page-exit {
+  opacity: 1;
+}
+
+.page-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+.container {
+  position: relative;
+}
+.page {
+  position: absolute;
+  left: 15px;
+  right: 15px;
 }
