@@ -1,9 +1,9 @@
 import React from 'react'
 import { posts } from '../../text/text'
 import {StyleSheet, css } from 'aphrodite'
-import { CSSTransition, Transition } from 'react-transition-group'
-import { Container } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import './style.css'
+import image from '../../assets/images/00.jpg'
 
 export default class Post extends React.Component {
   handleClick = () => {
@@ -22,31 +22,25 @@ export default class Post extends React.Component {
     }
     
     return (
-      <Container>
-        <div>
-          <p>{post.title}</p>
-          <p>{post.content}</p>
-          <p>{post.title}</p>
-          <p>{post.content}</p>
-          <p>{post.title}</p>
-          <p>{post.content}</p>
-          <p>{post.title}</p>
-          <p>{post.content}</p>
-          <p>{post.title}</p>
-          <p>{post.content}</p>
-          <p>{post.title}</p>
-          <p>{post.content}</p>
-          <p>{post.title}</p>
-          <p>{post.content}</p>
-        </div>
-      </Container>
+      <>
+        <img className={css(styles.image)} src={image} alt='Proklamasi'/>
+        <Container>
+          <Row>
+            <Col>
+              <h5 className='h5'>{post.title}</h5>
+              <p>{post.content}</p>
+            </Col>
+          </Row>
+        </Container>
+      </>
     );
   }
 }
 const styles = StyleSheet.create({
-  container: {
+  image: {
     width: '100%',
-    height: 100,
-    backgroundColor: 'blue',
+    height: 450,
+    objectFit: 'cover',
+    marginBottom: 34
   }
 })

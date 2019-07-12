@@ -18,7 +18,7 @@ function App() {
     <>
       <Router basename="/blog">
         <Jumbotron />
-        <Container className="container">
+        <Container fluid className="container">
           {routes.map(({ path, Component }) => (
             <Route key={path} exact path={path}>
               {(props) => (

@@ -20,6 +20,6 @@
 }
 .page {
   position: absolute;
-  left: 15px;
-  right: 15px;
+  left: 0px;
+  right: 0px;
 }

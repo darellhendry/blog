@@ -12,8 +12,6 @@
 
 .container-title {
   display: flex;
-}
-
-.date {
-  margin-left: auto;
+  align-items: center;
+  justify-content: space-between;
 }

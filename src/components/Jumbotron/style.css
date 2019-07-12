@@ -1,14 +1,14 @@
 .jumbo {
   padding-left: 16%;
-  padding-bottom: 8%;
-  padding-top: 8%;
+  padding-bottom: 4%;
+  padding-top: 4%;
   background-color: #E3F2FD;
 }
 
 body {
   background-color: #E3F2FD;
 }
-h3, h1 {
+.h5, h3, h1, p {
   font-family: 'Raleway', sans-serif;
 }
 
