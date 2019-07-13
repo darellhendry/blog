@@ -8,7 +8,7 @@
 body {
   background-color: #E3F2FD;
 }
-.h5, h3, h1, p {
+.h5, h3, h1, p, .p, em {
   font-family: 'Raleway', sans-serif;
 }
 
@@ -21,4 +21,12 @@ h1 {
   font-size: 60px;
   margin-bottom: 8px;
   margin-top: 8px;
+}
+
+.custom-bs {
+  background-color: transparent;
+}
+
+ol > li > a:hover {
+  text-decoration: none;
 }
