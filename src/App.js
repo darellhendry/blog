@@ -16,7 +16,7 @@ const routes = [
 function App() {
   return (
     <>
-      <Router basename="/blog">
+      <Router>
         <Jumbotron />
         <Container fluid className="container">
           {routes.map(({ path, Component }) => (
