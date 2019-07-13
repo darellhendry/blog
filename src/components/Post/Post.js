@@ -1,15 +1,16 @@
 import React from 'react'
 import { posts } from '../../text/text'
 import {StyleSheet, css } from 'aphrodite'
-import { Container, Row, Col, Breadcrumb } from 'react-bootstrap'
+import { Container, Row, Col, Breadcrumb, Spinner } from 'react-bootstrap'
 import image from '../../assets/images/00.jpg'
 
 export default class Post extends React.Component {
-  handleClick = () => {
-    
-    this.setState(prev => {
-      return { isIn: !prev.isIn };
-    })
+  state = {
+    isImageLoading: true
+  }
+
+  handleImageLoaded = () => {
+    this.setState({isImageLoading: false})
   }
 
   goToHome = () => {
@@ -30,12 +31,28 @@ export default class Post extends React.Component {
           className={css(styles.breadcrumb)}
           bsPrefix="breadcrumb custom-bs"
         >
-          <Breadcrumb.Item onClick={this.goToHome}>
-            Home
-          </Breadcrumb.Item>
+          <Breadcrumb.Item onClick={this.goToHome}>Home</Breadcrumb.Item>
           <Breadcrumb.Item active>{post.title}</Breadcrumb.Item>
         </Breadcrumb>
-        <img className={css(styles.image)} src={image} alt="Proklamasi" />
+        {this.state.isImageLoading ? (
+          <div style={{ display: "flex", justifyContent: 'center'}}>
+            <Spinner animation="border" />
+          </div>
+        ) : null}
+        <div
+          style={
+            this.state.isImageLoading
+              ? { display: "none" }
+              : { display: "block" }
+          }
+        >
+          <img
+            onLoad={this.handleImageLoaded}
+            className={css(styles.image)}
+            src={image}
+            alt="Proklamasi"
+          />
+        </div>
         <Container>
           <Row>
             <Col>
